@@ -903,9 +903,7 @@
     "dynamic_power": {
       "growatt": {
         "position": {
-          "register_no": 311,
-          "offset": 0,
-          "size": 2
+          "register_no": 311
         },
         "data": {
           "data_type": "INT"
