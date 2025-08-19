@@ -147,7 +147,7 @@ class Client:
                             retain=msg.retain,
                         )
                     except Exception as e:
-                        LOG.warning(f"Forwarding to GROWATT_CLOUD failed: {e}")
+                        LOG.error(f"Forwarding to GROWATT_CLOUD failed: {e}")
 
             unscrambled = parser.unscramble(msg.payload)
             LOG.debug(f"Received: %s %s", msg.topic, unscrambled.hex(" "))
