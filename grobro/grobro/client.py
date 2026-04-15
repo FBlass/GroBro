@@ -283,10 +283,10 @@ class Client:
                         known_registers = KNOWN_NEXA_REGISTERS
                     elif cfg["device_id"].startswith("HAQ"):
                         known_registers = KNOWN_SPF_REGISTERS
-                    # TODO: ShineWeLink
+                    # TODO: ShineWeLink Datalogger
                     elif cfg["device_id"].startswith("RAQ"):
-                        known_registers = KNOWN_SPF_REGISTERS
-                    # NEO 1000M-X
+                        known_registers = KNOWN_NEO_REGISTERS
+                    # NEO 1000M-X LoRa (encapsulated)
                     elif cfg["device_id"].startswith("PTQ"):
                         known_registers = KNOWN_NEO_REGISTERS                        
                     if known_registers:
