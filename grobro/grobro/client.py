@@ -283,7 +283,12 @@ class Client:
                         known_registers = KNOWN_NEXA_REGISTERS
                     elif cfg["device_id"].startswith("HAQ"):
                         known_registers = KNOWN_SPF_REGISTERS
-
+                    # TODO: ShineWeLink
+                    elif cfg["device_id"].startswith("RAQ"):
+                        known_registers = KNOWN_SPF_REGISTERS
+                    # NEO 1000M-X
+                    elif cfg["device_id"].startswith("PTQ"):
+                        known_registers = KNOWN_NEO_REGISTERS                        
                     if known_registers:
                         for reg in known_registers.config_registers.values():
                             if reg.growatt.register_no == cfg["register_no"]:
